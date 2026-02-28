@@ -1,0 +1,18 @@
+{
+  "frontend/src/index.css": "Global styles with warm neutral OKLCH color palette (off-white background, charcoal foreground, caramel accent), Barlow display font and Inter body font imports, and base typography rules.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Barlow/Inter font families, custom card shadows, additional border-radius tokens, and fade-in animation keyframes.",
+  "frontend/src/context/CartContext.tsx": "React Context for shopping cart state management with add, update quantity, remove, and clear operations; persists to sessionStorage.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching all shoes, a single shoe by ID, and shoes filtered by category from the backend actor.",
+  "frontend/src/components/Header.tsx": "Sticky navigation header with logo, desktop/mobile nav links, and cart icon with item count badge that opens the CartDrawer.",
+  "frontend/src/components/Footer.tsx": "Site footer with brand info, quick links, contact details, copyright year, and caffeine.ai attribution link with UTM params.",
+  "frontend/src/components/Layout.tsx": "Root layout component wrapping all pages with Header and Footer via TanStack Router's Outlet.",
+  "frontend/src/components/ProductCard.tsx": "Reusable product card with image, category badge, name, description, and price; navigates to product detail on click with hover effects.",
+  "frontend/src/components/CartDrawer.tsx": "Slide-in cart sheet showing all cart items with quantity controls, subtotal per item, order total, and checkout/continue shopping actions.",
+  "frontend/src/components/ImageGallery.tsx": "Product image gallery with main large view, prev/next navigation buttons, and clickable thumbnail strip.",
+  "frontend/src/components/FilterPanel.tsx": "Filter sidebar with price range slider, size button grid, and color checkbox list; emits filter changes to parent.",
+  "frontend/src/pages/Home.tsx": "Homepage with hero banner, perks bar, shop-by-category grid, featured products from backend, and CTA banner; all `/products` links now include `search={{}}` or `search={{ category }}` to satisfy the router's required search type.",
+  "frontend/src/pages/Products.tsx": "Product listing page with category tab pills, desktop filter sidebar, mobile filter sheet, active filter chips, and responsive product grid.",
+  "frontend/src/pages/ProductDetail.tsx": "Product detail page with image gallery, color/size selectors, add-to-cart with confirmation feedback; all `/products` links now include `search={{}}` to satisfy the router's required search type.",
+  "frontend/src/pages/About.tsx": "About page with brand story, stats section, validated contact form with success state, and store info (address, phone, hours, map placeholder).",
+  "frontend/src/App.tsx": "Main app with TanStack Router defining routes for home, products (with optional category search param), product detail, and about pages, all wrapped in CartProvider and Layout."
+}

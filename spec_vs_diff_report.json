@@ -1,0 +1,76 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-28T10:19:26.607Z",
+  "summary": "The diff implements all 7 requirements with good coverage. The backend Motoko actor, all frontend pages, cart functionality, filtering, product detail, about/contact page, and theming are all present. However, the backend is missing stable variable persistence and seed data pre-loading (REQ-4 ACs), and the backend does not expose an explicit remove product update method.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "Data is persisted in stable variables; Sample seed data with at least 8 products across multiple categories is pre-loaded",
+      "reason": "The backend/main.mo uses Map.empty<Text, Shoe>() as a regular variable without the stable keyword, and there are no system preupgrade/postupgrade hooks for persistence. No seed data initialization or pre-loaded products are present in the actor.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Backend actor exposes update methods to add and remove products",
+      "reason": "The backend exposes addShoe but there is no removeShoe or equivalent remove product update method visible in the actor.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "filterByCategory query method exposed on the backend actor",
+      "reason": "The build request only asked for list all products and get a product by ID as query methods. A separate filterByCategory query was added beyond the spec.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Perks/benefits bar section on the homepage with Free Shipping, Easy Returns, Secure Payment, and Premium Quality items",
+      "reason": "The build request did not specify a perks/benefits bar on the homepage. This is additional content not mentioned in REQ-1 or any other requirement.",
+      "evidence": [
+        "frontend/src/pages/Home.tsx"
+      ]
+    },
+    {
+      "description": "Shop-by-category visual image grid section on the homepage",
+      "reason": "The build request specifies a hero section and featured products grid for the homepage, but a separate shop-by-category image grid was added beyond the spec.",
+      "evidence": [
+        "frontend/src/pages/Home.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.82,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/CartDrawer.tsx",
+    "frontend/src/components/FilterPanel.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/ImageGallery.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/ProductCard.tsx",
+    "frontend/src/context/CartContext.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/About.tsx",
+    "frontend/src/pages/Home.tsx",
+    "frontend/src/pages/ProductDetail.tsx",
+    "frontend/src/pages/Products.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

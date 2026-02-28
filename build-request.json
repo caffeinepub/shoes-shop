@@ -1,0 +1,164 @@
+{
+  "kind": "build_request",
+  "title": "Shoes Shop Website",
+  "projectName": "Sole Street",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a homepage with a full-width hero section featuring a compelling tagline and call-to-action button, followed by a featured products grid showcasing selected shoes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website for shoes shop"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section spans full width with a background image, headline, subheadline, and a prominent CTA button",
+        "Featured products section displays at least 4–6 product cards with image, name, and price",
+        "Page is responsive across mobile, tablet, and desktop"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a product listing page that displays all shoes organized by category (e.g., Men, Women, Kids, Sport) with filter options for size, color, and price range.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website for shoes shop"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Category tabs or sidebar allows filtering by shoe category",
+        "Filter panel supports size, color, and price range selections",
+        "Product grid updates to reflect active filters",
+        "Each product card shows thumbnail, name, category, and price"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a product detail page showing multiple product images, product name, description, available sizes, color options, price, and an Add to Cart button.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website for shoes shop"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Product images are displayed in a gallery or carousel",
+        "Size selector allows user to pick a size before adding to cart",
+        "Color selector is shown if multiple colors are available",
+        "Add to Cart button is prominently displayed and functional"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a backend data store in Motoko for shoe products, including fields: id, name, description, category, price, available sizes, colors, and image URLs.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website for shoes shop"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend actor exposes query methods to list all products and get a product by ID",
+        "Backend actor exposes update methods to add and remove products",
+        "Data is persisted in stable variables",
+        "Sample seed data with at least 8 products across multiple categories is pre-loaded"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement a shopping cart that allows users to add products, adjust quantities, remove items, and see a running total.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website for shoes shop"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Cart icon in the navigation header shows item count badge",
+        "Cart drawer or page lists all added items with image, name, size, quantity controls, and subtotal",
+        "Users can increment, decrement, or remove items from the cart",
+        "Order total is calculated and displayed correctly",
+        "Cart state persists across page navigation within the session"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create an About/Contact page with a brief brand story, contact form (name, email, message), and store information (address, phone, hours).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website for shoes shop"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About section contains brand story copy and imagery",
+        "Contact form has name, email, and message fields with basic validation",
+        "Store info section displays address, phone number, and business hours",
+        "Page is styled consistently with the rest of the site"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Apply a bold, modern visual theme across the entire site using a warm neutral palette (off-white, charcoal, warm tan/caramel accents), strong sans-serif typography, generous whitespace, and clean card layouts that evoke a premium retail aesthetic.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website for shoes shop"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent color palette using off-white, charcoal, and caramel/warm tan accents is applied site-wide",
+        "Typography uses a bold sans-serif for headings and a clean sans-serif for body text",
+        "Navigation bar is clean with logo, category links, and cart icon",
+        "Hover states, transitions, and interactive feedback are smooth and consistent throughout"
+      ]
+    }
+  ],
+  "constraints": [
+    "All Motoko logic must remain in the single backend/main.mo actor file",
+    "Do not edit any files under frontend/src/hooks/ or frontend/src/components/ui",
+    "No external payment integrations or authentication required for this initial build"
+  ],
+  "nonGoals": [
+    "User account creation or login",
+    "Checkout and payment processing",
+    "Order history or order management",
+    "Admin dashboard for product management",
+    "Real-time inventory tracking"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Wide lifestyle hero banner showing stylish sneakers and shoes arranged on a clean surface with warm neutral tones (hero-banner.dim_1440x600.png)",
+      "Brand logo mark — a minimalist shoe silhouette icon in charcoal on a transparent background (logo-icon.dim_128x128.png)",
+      "Sample men's athletic sneaker product photo on white background (product-mens-sneaker.dim_600x600.png)",
+      "Sample women's heeled boot product photo on white background (product-womens-boot.dim_600x600.png)",
+      "Sample kids' colorful sneaker product photo on white background (product-kids-sneaker.dim_600x600.png)",
+      "Sample unisex casual loafer product photo on white background (product-casual-loafer.dim_600x600.png)"
+    ],
+    "edits": []
+  }
+}

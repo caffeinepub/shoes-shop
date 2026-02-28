@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "A website for a shoes shop.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Wide lifestyle hero banner showing stylish sneakers and shoes arranged on a clean surface with warm neutral tones (hero-banner.dim_1440x600.png)\n- Brand logo mark — a minimalist shoe silhouette icon in charcoal on a transparent background (logo-icon.dim_128x128.png)\n- Sample men's athletic sneaker product photo on white background (product-mens-sneaker.dim_600x600.png)\n- Sample women's heeled boot product photo on white background (product-womens-boot.dim_600x600.png)\n- Sample kids' colorful sneaker product photo on white background (product-kids-sneaker.dim_600x600.png)\n- Sample unisex casual loafer product photo on white background (product-casual-loafer.dim_600x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-homepage-with-a-full-width-hero-section-featuring-a-compelling-tagline-and-call-to-action-button-followed-by-a-featured-products-grid-showcasing-selected-shoes",
+      "title": "Create a homepage with a full-width hero section featuring a compelling tagline and call-to-action button, followed by a featured products grid showcasing selected shoes.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-product-listing-page-that-displays-all-shoes-organized-by-category-e-g-men-women-kids-sport-with-filter-options-for-size-color-and-price-range",
+      "title": "Create a product listing page that displays all shoes organized by category (e.g., Men, Women, Kids, Sport) with filter options for size, color, and price range.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-product-detail-page-showing-multiple-product-images-product-name-description-available-sizes-color-options-price-and-an-add-to-cart-button",
+      "title": "Create a product detail page showing multiple product images, product name, description, available sizes, color options, price, and an Add to Cart button.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-shopping-cart-that-allows-users-to-add-products-adjust-quantities-remove-items-and-see-a-running-total",
+      "title": "Implement a shopping cart that allows users to add products, adjust quantities, remove items, and see a running total.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-about-contact-page-with-a-brief-brand-story-contact-form-name-email-message-and-store-information-address-phone-hours",
+      "title": "Create an About/Contact page with a brief brand story, contact form (name, email, message), and store information (address, phone, hours).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-bold-modern-visual-theme-across-the-entire-site-using-a-warm-neutral-palette-off-white-charcoal-warm-tan-caramel-accents-strong-sans-serif-typography-generous-whitespace-and-clean-card-layouts-that-evoke-a-premium-retail-aesthetic",
+      "title": "Apply a bold, modern visual theme across the entire site using a warm neutral palette (off-white, charcoal, warm tan/caramel accents), strong sans-serif typography, generous whitespace, and clean card layouts that evoke a premium retail aesthetic.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Homepage with hero section and featured products",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Product listing page with categories and filters",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Product detail page with images, description, and add-to-cart",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Shopping cart functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Contact/About page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Implement a backend data store in Motoko for shoe products, including fields: id, name, description, category, price, available sizes, colors, and image URLs.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Shoes Shop",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

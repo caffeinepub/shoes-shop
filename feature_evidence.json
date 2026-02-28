@@ -1,0 +1,127 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-homepage-with-a-full-width-hero-section-featuring-a-compelling-tagline-and-call-to-action-button-followed-by-a-featured-products-grid-showcasing-selected-shoes",
+      "featureTitle": "Create a homepage with a full-width hero section featuring a compelling tagline and call-to-action button, followed by a featured products grid showcasing selected shoes.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ProductCard.tsx",
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-product-listing-page-that-displays-all-shoes-organized-by-category-e-g-men-women-kids-sport-with-filter-options-for-size-color-and-price-range",
+      "featureTitle": "Create a product listing page that displays all shoes organized by category (e.g., Men, Women, Kids, Sport) with filter options for size, color, and price range.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/FilterPanel.tsx",
+        "frontend/src/pages/Products.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-product-detail-page-showing-multiple-product-images-product-name-description-available-sizes-color-options-price-and-an-add-to-cart-button",
+      "featureTitle": "Create a product detail page showing multiple product images, product name, description, available sizes, color options, price, and an Add to Cart button.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ImageGallery.tsx",
+        "frontend/src/pages/ProductDetail.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-shopping-cart-that-allows-users-to-add-products-adjust-quantities-remove-items-and-see-a-running-total",
+      "featureTitle": "Implement a shopping cart that allows users to add products, adjust quantities, remove items, and see a running total.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CartDrawer.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/context/CartContext.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-about-contact-page-with-a-brief-brand-story-contact-form-name-email-message-and-store-information-address-phone-hours",
+      "featureTitle": "Create an About/Contact page with a brief brand story, contact form (name, email, message), and store information (address, phone, hours).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/About.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-bold-modern-visual-theme-across-the-entire-site-using-a-warm-neutral-palette-off-white-charcoal-warm-tan-caramel-accents-strong-sans-serif-typography-generous-whitespace-and-clean-card-layouts-that-evoke-a-premium-retail-aesthetic",
+      "featureTitle": "Apply a bold, modern visual theme across the entire site using a warm neutral palette (off-white, charcoal, warm tan/caramel accents), strong sans-serif typography, generous whitespace, and clean card layouts that evoke a premium retail aesthetic.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

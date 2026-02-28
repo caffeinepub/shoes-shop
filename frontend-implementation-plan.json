@@ -1,0 +1,179 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Sole Street - Shoes Shop Website Frontend",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create homepage with hero section and featured products grid",
+      "acceptanceCriteria": [
+        "Hero section spans full width with a background image, headline, subheadline, and a prominent CTA button",
+        "Featured products section displays at least 4–6 product cards with image, name, and price",
+        "Page is responsive across mobile, tablet, and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "create",
+          "description": "Create the homepage component with a full-width hero section using the generated hero-banner image (frontend/public/assets/generated/hero-banner.dim_1440x600.png) as background, featuring headline 'Step Into Style', subheadline, and a CTA button linking to the products page. Below the hero, render a featured products grid that fetches shoes via getAllShoes backend method and displays 4-6 product cards with image, name, and price. Ensure responsive layout for mobile, tablet, and desktop."
+        },
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable ProductCard component that accepts shoe data (id, name, price, imageUrls) as props and renders a card with product thumbnail, name, and price. Include hover effects and make the card clickable to navigate to the product detail page. Style with Tailwind using the site's color palette."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Home page component into the app router as the default route ('/') so users land on the homepage when visiting the site."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create product listing page with category filters and product grid",
+      "acceptanceCriteria": [
+        "Category tabs or sidebar allows filtering by shoe category",
+        "Filter panel supports size, color, and price range selections",
+        "Product grid updates to reflect active filters",
+        "Each product card shows thumbnail, name, category, and price"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Products.tsx",
+          "operation": "create",
+          "description": "Create the products listing page with category tabs (Men, Women, Kids, Sport) and a filter panel for size, color, and price range. Fetch products using getAllShoes or filterByCategory backend methods. Display products in a responsive grid using the ProductCard component. Implement client-side filtering for size, color, and price, updating the grid dynamically when filters change."
+        },
+        {
+          "path": "frontend/src/components/FilterPanel.tsx",
+          "operation": "create",
+          "description": "Create a FilterPanel component with controls for size selection (checkboxes), color selection (color swatches or checkboxes), and price range (slider or input fields). Emit filter changes to the parent Products page to update the displayed product list."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Products page at route '/products' in the app router and add a navigation link in the header to the products page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create product detail page with image gallery, size/color selectors, and Add to Cart",
+      "acceptanceCriteria": [
+        "Product images are displayed in a gallery or carousel",
+        "Size selector allows user to pick a size before adding to cart",
+        "Color selector is shown if multiple colors are available",
+        "Add to Cart button is prominently displayed and functional"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetail.tsx",
+          "operation": "create",
+          "description": "Create the product detail page that fetches a single shoe by ID using the getShoe backend method. Display product images in a carousel or gallery, product name, description, price, size selector (buttons or dropdown for available sizes), and color selector (if multiple colors exist). Include a prominent Add to Cart button that adds the selected product (with size and color) to the cart context."
+        },
+        {
+          "path": "frontend/src/components/ImageGallery.tsx",
+          "operation": "create",
+          "description": "Create an ImageGallery component that accepts an array of image URLs and displays them in a carousel or thumbnail gallery with a main large image view. Support click or swipe navigation between images."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the ProductDetail page at route '/products/:id' in the app router so clicking a product card navigates to its detail page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement shopping cart with add, adjust, remove, and total calculation",
+      "acceptanceCriteria": [
+        "Cart icon in the navigation header shows item count badge",
+        "Cart drawer or page lists all added items with image, name, size, quantity controls, and subtotal",
+        "Users can increment, decrement, or remove items from the cart",
+        "Order total is calculated and displayed correctly",
+        "Cart state persists across page navigation within the session"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/context/CartContext.tsx",
+          "operation": "create",
+          "description": "Create a CartContext using React Context API to manage cart state (items array with id, name, size, color, quantity, price, imageUrl). Provide methods to add items, update quantity, remove items, and calculate total. Persist cart state in sessionStorage so it survives page navigation within the session."
+        },
+        {
+          "path": "frontend/src/components/CartDrawer.tsx",
+          "operation": "create",
+          "description": "Create a CartDrawer component (or Cart page) that displays all cart items with image, name, size, quantity controls (increment/decrement buttons), and subtotal per item. Show the order total at the bottom. Allow users to remove items from the cart. Style consistently with the site theme."
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Add a cart icon to the navigation header that displays a badge with the current item count from CartContext. Clicking the icon opens the CartDrawer or navigates to the cart page."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap the app with CartContext.Provider so all components can access cart state and methods."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create About/Contact page with brand story, contact form, and store info",
+      "acceptanceCriteria": [
+        "About section contains brand story copy and imagery",
+        "Contact form has name, email, and message fields with basic validation",
+        "Store info section displays address, phone number, and business hours",
+        "Page is styled consistently with the rest of the site"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/About.tsx",
+          "operation": "create",
+          "description": "Create the About page with three sections: a brand story section with descriptive copy and imagery, a contact form with name, email, and message fields (include basic validation), and a store info section displaying address, phone number, and business hours. Style the page consistently using the site's color palette and typography."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the About page at route '/about' in the app router and add a navigation link in the header to the About page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Apply bold modern visual theme with warm neutral palette and clean typography",
+      "acceptanceCriteria": [
+        "A consistent color palette using off-white, charcoal, and caramel/warm tan accents is applied site-wide",
+        "Typography uses a bold sans-serif for headings and a clean sans-serif for body text",
+        "Navigation bar is clean with logo, category links, and cart icon",
+        "Hover states, transitions, and interactive feedback are smooth and consistent throughout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind theme to define a custom color palette with off-white (background), charcoal (text/dark), and caramel/warm tan (accent) colors. Configure font families with bold sans-serif for headings and clean sans-serif for body text. Add transition utilities for smooth hover and interactive states."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Apply global styles using the custom Tailwind theme colors and typography. Set base font styles, heading styles with bold sans-serif, and ensure generous whitespace and clean card layouts. Define consistent hover and transition effects for interactive elements."
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create a Header component with the site logo (using the generated logo-icon image at frontend/public/assets/generated/logo-icon.dim_128x128.png), navigation links to Home, Products, and About pages, and a cart icon with item count badge. Style with the site's color palette and ensure clean, modern layout."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create a Layout component that wraps all pages with the Header component at the top and a footer at the bottom. Use this layout as the container for all routed pages to ensure consistent navigation and branding across the site."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all routed page components with the Layout component so the header and footer appear on every page."
+        }
+      ]
+    }
+  ]
+}
